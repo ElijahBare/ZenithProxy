@@ -2,6 +2,11 @@ package com.zenith.module;
 
 import com.zenith.module.api.Module;
 import com.zenith.module.impl.*;
+import com.zenith.module.impl.mcpexploiter.ExploitHunterMCP;
+import com.zenith.module.impl.mcpexploiter.tools.InteractEntityTool;
+import com.zenith.module.impl.mcpexploiter.tools.PathToEntityTool;
+import com.zenith.module.impl.mcpexploiter.tools.BlockInteractionTool;
+import com.zenith.module.impl.mcpexploiter.tools.WorldViewTool;
 import it.unimi.dsi.fastutil.objects.Reference2ObjectMap;
 import it.unimi.dsi.fastutil.objects.Reference2ObjectOpenHashMap;
 
@@ -16,6 +21,12 @@ public class ModuleManager {
         asList(
             new ActionLimiter(),
             new ActiveHours(),
+            new ActionLimiter(),
+            new ExploitHunterMCP(),
+            new InteractEntityTool(),
+            new PathToEntityTool(),
+            new WorldViewTool(),
+            new BlockInteractionTool(),
             new AntiAFK(),
             new AntiKick(),
             new AntiLeak(),
